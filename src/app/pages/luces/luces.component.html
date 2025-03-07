@@ -1,0 +1,14 @@
+<div class="control-luces-container">
+    <header>
+      <h1>Control de Luces</h1>
+      <p>Enciende o apaga las luces de tu hogar desde esta página.</p>
+    </header>
+  
+    <section class="luces-control">
+      <h2>{{ lucesEncendidas ? 'Luces Encendidas' : 'Luces Apagadas' }}</h2>
+      <button class="btn" (click)="toggleLuces()">
+        {{ lucesEncendidas ? 'Apagar Luces' : 'Encender Luces' }}
+      </button>
+    </section>
+  </div>
+  

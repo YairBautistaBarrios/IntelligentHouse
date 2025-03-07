@@ -1,0 +1,100 @@
+/* Estilo general */
+.home-container {
+  font-family: 'Arial', sans-serif;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #445756;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  font-weight: 300;
+}
+
+/* Estilos para las secciones */
+section {
+  margin-bottom: 3rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos */
+section h2 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Botones */
+button.btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 25px;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  outline: none;
+}
+
+button.btn:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+button.btn:active {
+  transform: translateY(1px);
+}
+
+button.btn:focus {
+  outline: none;
+}
+
+/* Sección específica */
+#luces {
+  background-color: #f0f9f4;
+  border-left: 5px solid #4CAF50;
+}
+
+#temperatura {
+  background-color: #f9f4f0;
+  border-left: 5px solid #FFA500;
+}
+
+#seguridad {
+  background-color: #f4f0f9;
+  border-left: 5px solid #2196F3;
+}

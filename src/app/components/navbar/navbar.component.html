@@ -1,0 +1,42 @@
+<mat-toolbar class="navbar">
+    <button mat-icon-button (click)="drawer.toggle()" class="menu-button">
+      <mat-icon>menu</mat-icon>
+    </button>
+  
+    <span class="logo"> Casa Inteligente</span>
+  
+    <span class="spacer"></span>
+  
+    <nav class="nav-links">
+      <button mat-button routerLink="/home">Inicio</button>
+      <button mat-button routerLink="/luces">Luces</button>
+      <button mat-button routerLink="/temperatura">Temperatura</button>
+      <button mat-button routerLink="/seguridad">Seguridad</button>
+  
+      <button mat-button [matMenuTriggerFor]="menu">
+        Más 
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/historico">Hecho por</button>
+        <button mat-menu-item routerLink="/configuracion">Configuración</button>
+      </mat-menu>
+    </nav>
+  </mat-toolbar>
+  
+  <mat-sidenav-container>
+    <mat-sidenav #drawer mode="side" class="sidenav">
+      <mat-nav-list>
+        <a mat-list-item routerLink="/home">Inicio</a>
+        <a mat-list-item routerLink="/luces">Luces</a>
+        <a mat-list-item routerLink="/temperatura">Temperatura</a>
+        <a mat-list-item routerLink="/seguridad">Seguridad</a>
+        <a mat-list-item routerLink="/energia">Energía</a>
+        <a mat-list-item routerLink="/historico">Hecho por</a>
+        <a mat-list-item routerLink="/configuracion">Configuración</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <!-- Contenido principal -->
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+      

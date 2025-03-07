@@ -1,0 +1,14 @@
+<div class="control-seguridad-container">
+    <header>
+      <h1>Control de Seguridad</h1>
+      <p>Activa o desactiva el sistema de seguridad de tu hogar para mantenerlo protegido en todo momento.</p>
+    </header>
+  
+    <section class="seguridad-control">
+      <h2>{{ seguridadActivada ? 'Sistema de Seguridad Activado' : 'Sistema de Seguridad Desactivado' }}</h2>
+      <button class="btn" (click)="toggleSeguridad()">
+        {{ seguridadActivada ? 'Desactivar Seguridad' : 'Activar Seguridad' }}
+      </button>
+    </section>
+  </div>
+  

@@ -1,0 +1,15 @@
+<div class="control-temperatura-container">
+    <header>
+      <h1>Control de Temperatura</h1>
+      <p>Ajusta la temperatura de tu hogar de acuerdo a tus necesidades.</p>
+    </header>
+  
+    <section class="temperatura-control">
+      <h2>Temperatura Actual: {{ temperatura }}°C</h2>
+      <div class="controls">
+        <button class="btn" (click)="disminuirTemperatura()">-1°C</button>
+        <button class="btn" (click)="aumentarTemperatura()">+1°C</button>
+      </div>
+    </section>
+  </div>
+  
