@@ -1,14 +1,44 @@
+<!-- Contenedor principal para el control de seguridad -->
 <div class="control-seguridad-container">
-    <header>
-      <h1>Control de Seguridad</h1>
-      <p>Activa o desactiva el sistema de seguridad de tu hogar para mantenerlo protegido en todo momento.</p>
-    </header>
-  
-    <section class="seguridad-control">
-      <h2>{{ seguridadActivada ? 'Sistema de Seguridad Activado' : 'Sistema de Seguridad Desactivado' }}</h2>
-      <button class="btn" (click)="toggleSeguridad()">
-        {{ seguridadActivada ? 'Desactivar Seguridad' : 'Activar Seguridad' }}
-      </button>
-    </section>
-  </div>
-  
+
+  <!-- Encabezado de la página de control de seguridad -->
+  <header>
+    <!-- Título principal de la sección -->
+    <h1>Control de Seguridad</h1>
+    <!-- Descripción que explica lo que puede hacer el usuario en esta página -->
+    <p>Activa o desactiva el sistema de seguridad de tu hogar para mantenerlo protegido en todo momento.</p>
+  </header>
+
+  <!-- Sección para mostrar el estado del sistema de seguridad -->
+  <section class="seguridad-control">
+    <!-- Título que muestra el estado del sistema de seguridad -->
+    <h2>{{ seguridadActivada ? 'Sistema de Seguridad Activado' : 'Sistema de Seguridad Desactivado' }}</h2>
+    <!-- Este título cambia dinámicamente dependiendo del valor de 'seguridadActivada'. Si es 'true', muestra 'Sistema de Seguridad Activado'; de lo contrario, muestra 'Sistema de Seguridad Desactivado' -->
+  </section>
+
+  <!-- Sección para controles adicionales del sistema de seguridad -->
+  <section class="controles-adicionales">
+    <!-- Título de la sección de controles adicionales -->
+    <h3>Controles Adicionales</h3>
+
+    <!-- Botón para controlar el estado de las puertas -->
+    <button class="btn" (click)="togglePuertas()">
+      <!-- Texto dinámico del botón cambia según el estado de las puertas -->
+      {{ puertasCerradas ? 'Cerrar Puertas' : 'Abrir Puertas' }}
+    </button>
+
+    <!-- Botón para controlar el estado de las ventanas -->
+    <button class="btn" (click)="toggleVentanas()">
+      <!-- Texto dinámico del botón cambia según el estado de las ventanas -->
+      {{ ventanasCerradas ? 'Cerrar Ventanas' : 'Abrir Ventanas' }}
+    </button>
+
+    <!-- Botón para controlar el estado de la alarma -->
+    <button class="btn" (click)="toggleAlarma()">
+      <!-- Texto dinámico del botón cambia según el estado de la alarma -->
+      {{ alarmaEncendida ? 'Apagar Alarma' : 'Encender Alarma' }}
+    </button>
+
+  </section>
+
+</div>

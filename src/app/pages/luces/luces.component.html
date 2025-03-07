@@ -1,14 +1,36 @@
+<!-- Contenedor principal para el control de luces -->
 <div class="control-luces-container">
-    <header>
-      <h1>Control de Luces</h1>
-      <p>Enciende o apaga las luces de tu hogar desde esta página.</p>
-    </header>
   
-    <section class="luces-control">
-      <h2>{{ lucesEncendidas ? 'Luces Encendidas' : 'Luces Apagadas' }}</h2>
-      <button class="btn" (click)="toggleLuces()">
-        {{ lucesEncendidas ? 'Apagar Luces' : 'Encender Luces' }}
+  <!-- Encabezado de la página de control de luces -->
+  <header>
+    <!-- Título principal de la sección -->
+    <h1>Control de Luces</h1>
+    <!-- Descripción de lo que el usuario puede hacer en esta página -->
+    <p>Enciende o apaga las luces de tu hogar desde esta página.</p>
+  </header>
+
+  <!-- Sección de control de todas las luces -->
+  <section class="luces-control">
+    <!-- Título que muestra el estado de las luces (encendidas o apagadas) -->
+    <h2>{{ lucesEncendidas() ? 'Luces Encendidas' : 'Luces Apagadas' }}</h2>
+    <!-- Botón que permite encender o apagar todas las luces -->
+    <button class="btn" (click)="toggleTodasLasLuces()">
+      <!-- Texto dinámico del botón, cambia según el estado de las luces -->
+      {{ lucesEncendidas() ? 'Apagar Todas' : 'Encender Todas' }}
+    </button>
+  </section>
+
+  <!-- Sección para el control individual de cada habitación -->
+  <section class="habitaciones">
+    <!-- Itera a través de todas las luces (probablemente un array de objetos) -->
+    <div *ngFor="let luz of luces(); let i = index" class="habitacion">
+      <!-- Muestra el nombre de la luz y su estado (encendida o apagada) -->
+      <span>{{ luz.nombre }}: {{ luz.encendida ? 'Encendida' : 'Apagada' }}</span>
+      <!-- Botón para cambiar el estado de una luz específica -->
+      <button class="btn" (click)="toggleLuz(i)">
+        <!-- Texto dinámico del botón según el estado de la luz -->
+        {{ luz.encendida ? 'Apagar' : 'Encender' }}
       </button>
-    </section>
-  </div>
-  
+    </div>
+  </section>
+</div>

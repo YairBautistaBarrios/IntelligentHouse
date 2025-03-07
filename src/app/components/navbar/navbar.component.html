@@ -1,42 +1,57 @@
+<!-- Barra de herramientas (navbar) utilizando Material Design -->
 <mat-toolbar class="navbar">
-    <button mat-icon-button (click)="drawer.toggle()" class="menu-button">
-      <mat-icon>menu</mat-icon>
+  <!-- Botón de menú para abrir/cerrar el sidenav (menú lateral) -->
+  <button mat-icon-button (click)="drawer.toggle()" class="menu-button">
+    <!-- Este botón activa la función 'toggle' del sidenav, que abre o cierra el menú lateral -->
+  </button>
+
+  <!-- Logo de la aplicación -->
+  <span class="logo"> Casa Inteligente</span>
+
+  <!-- Espaciador para separar los elementos del navbar -->
+  <span class="spacer"></span>
+
+  <!-- Enlaces de navegación -->
+  <nav class="nav-links">
+    <!-- Botones de navegación con enlace a diferentes rutas -->
+    <button mat-button routerLink="/home">Inicio</button>
+    <button mat-button routerLink="/luces">Luces</button>
+    <button mat-button routerLink="/temperatura">Temperatura</button>
+    <button mat-button routerLink="/seguridad">Seguridad</button>
+
+    <!-- Botón con menú desplegable -->
+    <button mat-button [matMenuTriggerFor]="menu">
+      Más 
     </button>
-  
-    <span class="logo"> Casa Inteligente</span>
-  
-    <span class="spacer"></span>
-  
-    <nav class="nav-links">
-      <button mat-button routerLink="/home">Inicio</button>
-      <button mat-button routerLink="/luces">Luces</button>
-      <button mat-button routerLink="/temperatura">Temperatura</button>
-      <button mat-button routerLink="/seguridad">Seguridad</button>
-  
-      <button mat-button [matMenuTriggerFor]="menu">
-        Más 
-      </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item routerLink="/historico">Hecho por</button>
-        <button mat-menu-item routerLink="/configuracion">Configuración</button>
-      </mat-menu>
-    </nav>
-  </mat-toolbar>
-  
-  <mat-sidenav-container>
-    <mat-sidenav #drawer mode="side" class="sidenav">
-      <mat-nav-list>
-        <a mat-list-item routerLink="/home">Inicio</a>
-        <a mat-list-item routerLink="/luces">Luces</a>
-        <a mat-list-item routerLink="/temperatura">Temperatura</a>
-        <a mat-list-item routerLink="/seguridad">Seguridad</a>
-        <a mat-list-item routerLink="/energia">Energía</a>
-        <a mat-list-item routerLink="/historico">Hecho por</a>
-        <a mat-list-item routerLink="/configuracion">Configuración</a>
-      </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content>
-      <!-- Contenido principal -->
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-      
+
+    <!-- Menú desplegable -->
+    <mat-menu #menu="matMenu">
+      <!-- Elementos dentro del menú -->
+      <button mat-menu-item routerLink="/historico">Hecho por</button>
+      <button mat-menu-item routerLink="/configuracion">Configuración</button>
+    </mat-menu>
+  </nav>
+</mat-toolbar>
+
+<!-- Contenedor para el menú lateral (sidenav) -->
+<mat-sidenav-container>
+  <!-- Sidenav (menú lateral), que se puede abrir o cerrar -->
+  <mat-sidenav #drawer mode="side" class="sidenav">
+    <!-- Lista de navegación dentro del sidenav -->
+    <mat-nav-list>
+      <!-- Enlaces del menú lateral con rutas -->
+      <a mat-list-item routerLink="/home">Inicio</a>
+      <a mat-list-item routerLink="/luces">Luces</a>
+      <a mat-list-item routerLink="/temperatura">Temperatura</a>
+      <a mat-list-item routerLink="/seguridad">Seguridad</a>
+      <a mat-list-item routerLink="/energia">Energía</a>
+      <a mat-list-item routerLink="/historico">Hecho por</a>
+      <a mat-list-item routerLink="/configuracion">Configuración</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Contenido principal del sidenav -->
+  <mat-sidenav-content>
+    <!-- Aquí irá el contenido principal de la página -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -23,5 +23,8 @@ export const routes: Routes = [
         path: 'seguridad',
         component: SeguridadComponent,
         title: 'Seguridad'
+    },
+    {
+        path: '', redirectTo: '/home', pathMatch: 'full'
     }
 ];

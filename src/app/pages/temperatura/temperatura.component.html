@@ -1,15 +1,23 @@
+<!-- Contenedor principal para el control de temperatura y ventilador -->
 <div class="control-temperatura-container">
-    <header>
-      <h1>Control de Temperatura</h1>
-      <p>Ajusta la temperatura de tu hogar de acuerdo a tus necesidades.</p>
-    </header>
-  
-    <section class="temperatura-control">
-      <h2>Temperatura Actual: {{ temperatura }}°C</h2>
-      <div class="controls">
-        <button class="btn" (click)="disminuirTemperatura()">-1°C</button>
-        <button class="btn" (click)="aumentarTemperatura()">+1°C</button>
-      </div>
-    </section>
-  </div>
-  
+
+  <!-- Sección para mostrar la temperatura actual -->
+  <section class="temperatura-control">
+    <!-- Encabezado h2 para mostrar la temperatura -->
+    <h2>Temperatura Actual: {{ temperatura }}°C</h2>
+    <!-- {{ temperatura }} es una interpolación de Angular, que muestra el valor actual de la variable 'temperatura' -->
+  </section>
+
+  <!-- Sección para el control del ventilador -->
+  <section class="ventilador-control">
+    <div class="controls">
+      <!-- Botón para encender o apagar el ventilador -->
+      <button class="btn" (click)="toggleVentilador()">
+        <!-- Texto dinámico del botón: si ventiladorEncendido es true, muestra "Apagar Ventilador", de lo contrario, muestra "Encender Ventilador" -->
+        {{ ventiladorEncendido ? 'Apagar Ventilador' : 'Encender Ventilador' }}
+      </button>
+      <!-- El evento (click) ejecuta el método toggleVentilador() cuando el usuario hace clic en el botón -->
+    </div>
+  </section>
+
+</div>

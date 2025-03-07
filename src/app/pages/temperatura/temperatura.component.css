@@ -1,75 +1,45 @@
-/* Estilos para el control de temperatura */
 .control-temperatura-container {
-    font-family: 'Arial', sans-serif;
-    padding: 2rem;
-    background-color: #f4f4f4;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-    border-radius: 8px;
-  }
-  
-  header {
-    background-color: #FFA500;
-    color: white;
-    padding: 2rem 0;
-    border-radius: 8px;
-  }
-  
-  header h1 {
-    font-size: 2.5rem;
-    margin: 0;
-  }
-  
-  header p {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
-    font-weight: 300;
-  }
-  
-  /* Estilos del control de temperatura */
-  .temperatura-control {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 2rem;
-  }
-  
-  .temperatura-control h2 {
-    color: #333;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .controls {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  button.btn {
-    background-color: #FFA500;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    border-radius: 25px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    outline: none;
-  }
-  
-  button.btn:hover {
-    background-color: #e68900;
-    transform: translateY(-2px);
-  }
-  
-  button.btn:active {
-    transform: translateY(1px);
-  }
-  
-  button.btn:focus {
-    outline: none;
-  }
-  
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f8f9fa, #e3e6ea);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.temperatura-control h2 {
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.ventilador-control {
+  margin-top: 20px;
+  padding: 15px;
+  border-top: 2px solid #ccc;
+}
+
+.ventilador-control .controls {
+  margin-top: 15px;
+}
+
+.btn {
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
